@@ -1,11 +1,11 @@
 "use strict";
 /*    JavaScript 7th Edition
       Chapter 8
-      Chapter case   
+      Chapter case
 
       Draw Poker Game using Object Oriented Programming
-      Author: 
-      Date:       
+      Author: Jonathan Cantu
+      Date:   March 29, 2026
 
       Filename:       js08.js
  */
@@ -22,8 +22,8 @@ function playDrawPoker() {
    let betSelection = document.getElementById("bet");
    let bankBox = document.getElementById("bank");
    let cardImages = document.querySelectorAll("img.cardImg");
-    
-   
+
+
       dealButton.addEventListener("click", function() {
       if (pokerGame.currentBank >= pokerGame.currentBet) {
          // Enable the Draw and Stand buttons after the initial deal
@@ -32,34 +32,34 @@ function playDrawPoker() {
          drawButton.disabled = false;       // Turn on the Draw button
          standButton.disabled = false;      // Turn on the Stand Button
          statusBox.textContent = "";        // Erase any status messages
-         
+
 
    });
-   
-   
+
+
    drawButton.addEventListener("click", function() {
       // Enable the Deal and Bet options when the player chooses to draw new cards
       dealButton.disabled = false;        // Turn on the Deal button
       betSelection.disabled = false;      // Turn on the Bet Selection list
       drawButton.disabled = true;         // Turn off the Draw button
       standButton.disabled = true;        // Turn off the Stand Button
-      
+
 
 
    });
-   
-    
+
+
    standButton.addEventListener("click", function() {
-      // Enable the Deal and Bet options when the player chooses to stand with their hand 
+      // Enable the Deal and Bet options when the player chooses to stand with their hand
       dealButton.disabled = false;        // Turn on the Deal button
       betSelection.disabled = false;      // Turn on the Bet Selection list
       drawButton.disabled = true;         // Turn off the Draw button
-      standButton.disabled = true;        // Turn off the Stand Button  
+      standButton.disabled = true;        // Turn off the Stand Button
 
-    
+
    });
-   
-   
+
+
    // Reload the current page when the Reset button is clicked
    resetButton.addEventListener("click", function() {
       location.reload();

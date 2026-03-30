@@ -2,11 +2,11 @@
 
 /*    JavaScript 7th Edition
       Chapter 8
-      Chapter case   
+      Chapter case
 
       Custom Objects Used in Poker Games
-      Author: 
-      Date:       
+      Author: Jonathan Cantu
+      Date:   March 29, 2026
 
       Filename:       objects.js
  */
@@ -41,12 +41,12 @@
 
 
 
-   
+
    /* ------------------------------------------------+
    | The handType() function returns a text string of |
    | the type of hand held by 5-card poker hand.      |
    +-------------------------------------------------*/
-   function handType(pokerHand) {       
+   function handType(pokerHand) {
       /* Determine the rank value of each card in the hand
          by creating a property named rankValue         */
       for (let i = 0; i < pokerHand.cards.length; i++) {
@@ -61,24 +61,24 @@
          } else {
             pokerHand.cards[i].rankValue = parseInt(pokerHand.cards[i].rank);
          }
-      }      
-      
+      }
+
       /* Function to return the highest ranked value in a five-card hand */
       function highCard() {
          return Math.max(pokerHand.cards[0].rankValue, pokerHand.cards[1].rankValue,
-                         pokerHand.cards[2].rankValue, pokerHand.cards[3].rankValue, 
+                         pokerHand.cards[2].rankValue, pokerHand.cards[3].rankValue,
                          pokerHand.cards[4].rankValue);
       }
-      
+
       /* Function to test for the presence of a flush in which all
          five cards have the same suit */
       function hasFlush() {
-         let firstSuit = pokerHand.cards[0].suit;   
+         let firstSuit = pokerHand.cards[0].suit;
          return pokerHand.cards.every(function(card) {
             return card.suit === firstSuit;
          });
-      };   
-      
+      };
+
       /* Function to test for the presence of a straight in which the
          rank value of the cards can be placed in sequential order */
       function hasStraight() {
@@ -91,19 +91,19 @@
             } else {
                return true;
             }
-         });   
-      }; 
-      
+         });
+      };
+
       /* Function to test for the presence of a straight flush */
       function hasStraightFlush() {
          return hasFlush() && hasStraight();
       };
 
-      /* Function to test for the presence of a royal flush 
+      /* Function to test for the presence of a royal flush
          which consists of 10-J-Q-K-A of the same suit */
       function hasRoyalFlush() {
          return hasStraightFlush() && highCard() === 14;
-      };   
+      };
 
       /* Function to test for the presence of: pairs, two pairs,
          three of a kind, four of a kind, and full houses  */
@@ -117,10 +117,10 @@
              handSets[card.rankValue] = 1;
            }
          });
-         
+
          let sets = "none";
          let pairRank;
-         
+
          for (let cardRank in handSets){
             if (handSets[cardRank] === 4) {sets = "Four of a Kind";}
             if (handSets[cardRank] === 3) {
@@ -133,14 +133,14 @@
                else {sets = "Pair"; pairRank = cardRank;}
             }
          }
-         
+
          if (sets === "Pair" && pairRank >= 11) {
             sets = "Jacks or Better";
          }
-         
-         return sets;   
+
+         return sets;
       }
-      
+
       // Return a text string describing the hand for draw poker //
       if (hasRoyalFlush()) {return "Royal Flush";}
       else if (hasStraightFlush()) {return "Straight Flush";}
@@ -150,18 +150,18 @@
          let sets = hasSets();
          if (sets === "Pair" || sets === "none") {sets = "No Winner";}
          return sets;
-      }   
+      }
    }
    /* ------------------------------------------------+
    |             End of the  handType() function      |
-   +-------------------------------------------------*/   
- 
- 
- 
- 
- 
- 
- 
+   +-------------------------------------------------*/
+
+
+
+
+
+
+
 
 
 
