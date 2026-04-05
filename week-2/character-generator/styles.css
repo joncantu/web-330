@@ -1,0 +1,143 @@
+/*  JavaScript 7th Edition
+    Chapter 8
+    Hands-on Project 8-1
+
+    Filename: styles.css
+*/
+
+/* reset rules */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+}
+
+body {
+  display: grid;
+  /*
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr 1fr;
+  */
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  height: 100vh;
+  margin: 0px;
+  padding: 0;
+  background:
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url("images/RusticMedievalDoubleDoors.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+h1 {
+   font-size: 28px;
+   font-family: "Copperplate Gothic", "Copperplate", serif;
+}
+
+h2 {
+   font-size: 22px;
+   font-family: "Copperplate Gothic", "Copperplate", serif;
+   text-decoration: underline;
+}
+
+label {
+    font-weight: bold;
+    display: inline-block;
+}
+
+ol, ul {
+   list-style: none;
+}
+
+/* page header */
+header {
+   background: #5472B2;
+   width: 100%;
+   color: white;
+   font-size: 48px;
+   text-align: center;
+   line-height: 1.5em;
+   margin-bottom: 0;
+}
+
+.submit-button {
+   background: #5472B2;
+   color: white;
+   font-size: 18px;
+   padding: 10px;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+}
+
+.door-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  padding: 10px;
+  border-radius: 8px;
+
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.door-header-container {
+  grid-column: 1 / span 3;   /* span both columns */
+  grid-row: 1;              /* top panel */
+  margin-top: 10%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  vertical-align: top;
+}
+
+.door-form-container {
+  grid-column: 2;   /* left door */
+  grid-row: 2;      /* center panel */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#characterOutput {
+  grid-column: 2;
+  grid-row: 3 / span 2;
+  align-self: center;
+
+  /* Use Flexbox for content centering and vertical bottom alignment */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: white;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.5); /* Slightly darker background for focus */
+  max-width: 80%; /* Keep within readable width */
+}
+
+/* ENFORCING SEPARATE LINES: Elements inside Output */
+#characterOutput h2,
+#characterOutput p {
+   display: block; /* Ensure block display for line breaks */
+   width: 100%;
+   margin: 8px 0; /* Vertical spacing */
+   text-align: center; /* Ensure text is centered horizontally */
+}
