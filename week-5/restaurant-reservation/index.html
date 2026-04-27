@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--
+      Pragmatic JavaScript
+      Chapter 2
+      Programming Assignment
+
+      Author: Jonathan Cantu
+      Date:   April 25, 2026
+      Filename: index.html
+    -->
+    <title>Table Reservation</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <script src="scripts/script.js" defer></script>
+  </head>
+  <body background="images/restaurant-bg.jpg">
+    <div class="form-container">
+      <form id="reservationForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" /><br />
+        <input type="number" id="tableNumber" name="tableNumber" /><br />
+        <input type="submit" value="Reserve Table" />
+
+        <input type="hidden" id="tableNumber" name="tableNumber" />
+      </form>
+      <p id="message"></p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
