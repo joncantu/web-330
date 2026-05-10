@@ -1,0 +1,42 @@
+/* JavaScript 7th Edition style (adapted) */
+
+* { box-sizing: border-box; }
+
+html, body, div, h1, h2, p, header, section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  width: 960px;
+  margin: 0 auto;
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+header {
+  background: #5472B2;
+  color: #fff;
+  font-size: 44px;
+  text-align: center;
+  padding: 15px 0;
+}
+
+section {
+  background-color: #FFDB70;
+  padding: 20px;
+  min-height: 340px;
+}
+
+section h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+div {
+  background: #fff;
+  width: 85%;
+  margin: 12px auto;
+  padding: 12px;
+  border: 2px solid #888;
+}
