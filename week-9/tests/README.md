@@ -45,7 +45,3 @@ This test suite verifies 5 key async JavaScript best practices:
 ```bash
 # Open in browser
 open tests/tests.html
-
-# Or with a local server
-npx serve .
-# Then navigate to http://localhost:3000/tests/tests.html
