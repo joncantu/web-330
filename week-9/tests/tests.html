@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Rating System - Test Suite</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="src/test-suite.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🧪 Movie Rating System - Test Suite</h1>
+    <p style="color: #858585; margin-bottom: 20px;">
+      Verifying async best practices and proper data flow
+    </p>
+
+    <!-- ✅ Link back to main app (up one directory) -->
+    <div style="background: #252526; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+      <a href="../index.html" style="color: #4ec9b0; text-decoration: none; font-size: 1.1rem;">
+        ← Back to Movie Rating App
+      </a>
+    </div>`
+
+    <div class="test-controls">
+      <button onclick="runAllTests()">▶️ Run All Tests</button>
+      <button onclick="runAsyncTests()">⏱️ Async Tests Only</button>
+      <button onclick="runConcurrencyTests()">🔄 Concurrency Tests Only</button>
+      <button onclick="runErrorTests()">⚠️ Error Handling Tests Only</button>
+      <button onclick="clearResults()">🗑️ Clear Results</button>
+    </div>
+
+    <div id="test-results"></div>
+
+    <div id="summary" class="summary" style="display: none;">
+      <h2>📊 Test Summary</h2>
+      <div class="summary-stats">
+        <div class="stat-box">
+          <div class="stat-value total-stat" id="total-tests">0</div>
+          <div class="stat-label">Total Tests</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value pass-stat" id="passed-tests">0</div>
+          <div class="stat-label">Passed</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value fail-stat" id="failed-tests">0</div>
+          <div class="stat-label">Failed</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value" id="duration">0ms</div>
+          <div class="stat-label">Duration</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

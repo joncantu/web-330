@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Rating System</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="src/script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎬 Movie Rating System</h1>
+      <p>Rate your favorite movies and read reviews</p>
+    </header>
+
+    <div class="movies-container" id="movies-container">
+      <!-- Movie cards will be inserted here -->
+    </div>
+  </div>
+
+  <!-- Modal for submitting reviews -->
+  <div id="review-modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close" id="close-modal">&times;</span>
+      <h2 id="modal-title">Submit Review</h2>
+
+      <form id="review-form">
+        <div class="form-group">
+          <label for="rating">Your Rating:</label>
+          <div class="star-rating">
+            <input type="radio" name="rating" value="5" id="star5" required>
+            <label for="star5">⭐</label>
+            <input type="radio" name="rating" value="4" id="star4">
+            <label for="star4">⭐</label>
+            <input type="radio" name="rating" value="3" id="star3">
+            <label for="star3">⭐</label>
+            <input type="radio" name="rating" value="2" id="star2">
+            <label for="star2">⭐</label>
+            <input type="radio" name="rating" value="1" id="star1">
+            <label for="star1">⭐</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="review-text">Your Review:</label>
+          <textarea
+            id="review-text"
+            rows="4"
+            placeholder="Share your thoughts about this movie..."
+            required
+            minlength="10"
+            maxlength="500"
+          ></textarea>
+          <div class="char-count">
+            <span id="char-counter">0</span>/500 characters
+          </div>
+        </div>
+
+        <div id="error-display" class="error-message hidden"></div>
+
+        <button type="submit" id="submit-btn" class="submit-btn">
+          Submit Review
+        </button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
